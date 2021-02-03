@@ -1,4 +1,4 @@
-import { AxiosHttpClient } from './azios-http-client'
+import { AxiosHttpClient } from './axios-http-client'
 import faker from 'faker'
 import axios from 'axios'
 
