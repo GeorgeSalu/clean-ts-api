@@ -10,7 +10,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.ts', 'stsx', '.js', 'scss'],
+    extensions: ['.ts', '.tsx', '.js', 'scss'],
     alias: {
       '@': path.join(__dirname, 'src')
     }
@@ -27,7 +27,7 @@ module.exports = {
       }, {
         loader: 'css-loader',
         options: {
-          module: true
+          modules: true
         }
       }, {
         loader: 'sass-loader'
