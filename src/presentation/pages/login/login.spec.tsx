@@ -55,7 +55,7 @@ describe('Login component', () => {
     expect(passwordStatus.textContent).toBe('🔴')
   })
 
-  test('should show valid email state if Validation succeds', () => {
+  test('should show valid email state if Validation succeeds', () => {
     const { sut, valitationStub } = makeSut()
     valitationStub.errorMessage = null
     const emailInput = sut.getByTestId('email')
@@ -64,7 +64,7 @@ describe('Login component', () => {
     expect(emailStatus.title).toBe('Tudo certo')
   })
 
-  test('should show valid password state if Validation succeds', () => {
+  test('should show valid password state if Validation succeeds', () => {
     const { sut, valitationStub } = makeSut()
     valitationStub.errorMessage = null
     const passwordInput = sut.getByTestId('password')
