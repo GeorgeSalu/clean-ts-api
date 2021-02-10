@@ -26,7 +26,7 @@ const makeSut = (params?: SutParams): SutTypes => {
 
 const simulateValidSubmit = (sut: RenderResult, email = faker.internet.email(), password = faker.internet.password()): void => {
   populateEmailField(sut, email)
-  populatePassowrdField(sut, password)
+  populatePasswordField(sut, password)
   const submitButton = sut.getByTestId('submit') as HTMLButtonElement
   fireEvent.click(submitButton)
 }
@@ -36,7 +36,7 @@ const populateEmailField = (sut: RenderResult, email = faker.internet.email()): 
   fireEvent.input(emailInput, { target: { value: email } })
 }
 
-const populatePassowrdField = (sut: RenderResult, password = faker.internet.password()): void => {
+const populatePasswordField = (sut: RenderResult, password = faker.internet.password()): void => {
   const passwordInput = sut.getByTestId('password')
   fireEvent.input(passwordInput, { target: { value: password } })
 }
