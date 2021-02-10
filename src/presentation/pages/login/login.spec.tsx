@@ -51,13 +51,14 @@ const populatePasswordField = (sut: RenderResult, password = faker.internet.pass
   fireEvent.input(passwordInput, { target: { value: password } })
 }
 
-const simuteStatusForField = (sut: RenderResult, fieldName: string, validationErro?: string): void => {
+const testStatusForField = (sut: RenderResult, fieldName: string, validationErro?: string): void => {
   const emailStatus = sut.getByTestId(`${fieldName}-status`)
   expect(emailStatus.title).toBe(validationErro || 'Tudo certo')
 }
 
 describe('Login component', () => {
   afterEach(cleanup)
+
   beforeEach(() => {
     localStorage.clear()
   })
@@ -73,7 +74,7 @@ describe('Login component', () => {
     expect(emailStatus.title).toBe(validationError)
     expect(emailStatus.textContent).toBe('🔴')
     const passwordStatus = sut.getByTestId('password-status')
-    simuteStatusForField(sut, 'email', validationError)
+    testStatusForField(sut, 'email', validationError)
     expect(passwordStatus.textContent).toBe('🔴')
   })
 
