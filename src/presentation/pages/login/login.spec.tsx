@@ -6,7 +6,7 @@ import 'jest-localstorage-mock'
 import { render, RenderResult, fireEvent, cleanup, waitFor } from '@testing-library/react'
 import Login from './login'
 import { ValidationStub, AuthenticationSpy } from '@/presentation/test/'
-import { InvalidCredentialError } from '@/domain/errors'
+import { InvalidCredentialsError } from '@/domain/errors'
 
 type SutTypes = {
   sut: RenderResult
@@ -156,7 +156,7 @@ describe('Login Component', () => {
 
   test('Should present error if Authentication fails', async () => {
     const { sut, authenticationSpy } = makeSut()
-    const error = new InvalidCredentialError()
+    const error = new InvalidCredentialsError()
     jest.spyOn(authenticationSpy, 'auth').mockReturnValueOnce(Promise.reject(error))
     await simulateValidSubmit(sut)
     testElementText(sut, 'main-error', error.message)

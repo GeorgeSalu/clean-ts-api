@@ -1,5 +1,5 @@
 import { UnexpectedError } from './../../../domain/errors/unexpected-error'
-import { InvalidCredentialError } from './../../../domain/errors/invalid-credentials-errors'
+import { InvalidCredentialsError } from './../../../domain/errors/invalid-credentials-errors'
 import { mockAccoutModel, mockAuthentication } from '../../../domain/test/mock-account'
 import { HttpPostClientSpy } from '../../test/mock-http-client'
 import { RemoteAuthentication } from './remote-authentication'
@@ -43,7 +43,7 @@ describe('RemoteAuthentication', () => {
       statusCode: HttpStatusCode.unauthorized
     }
     const promise = sut.auth(mockAuthentication())
-    await expect(promise).rejects.toThrow(new InvalidCredentialError())
+    await expect(promise).rejects.toThrow(new InvalidCredentialsError())
   })
 
   test('Should throw UnexpectedError if HttpPostClient returns 400', async () => {
