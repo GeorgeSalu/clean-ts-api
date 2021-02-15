@@ -1,5 +1,5 @@
-import { UnexpectedError } from './../../../domain/errors/unexpected-error'
-import { InvalidCredentialsError } from './../../../domain/errors/invalid-credentials-errors'
+import { UnexpectedError } from '@/domain/errors/unexpected-error'
+import { InvalidCredentialsError } from '@/domain/errors/invalid-credentials-errors'
 import { AuthenticationParams, Authentication } from '@/domain/usecases/authentication'
 import { HttpPostClient } from '@/data/protocols/http/http-post-client'
 import { HttpStatusCode } from '@/data/protocols/http/http-response'
