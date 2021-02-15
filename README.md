@@ -10,7 +10,7 @@ Além de tudo isso irei mostrar na prática como utilizar o Git, Jest, React Tes
 
 Esse curso fará você evoluir mais do que anos de faculdade. Mostrarei pra você, de forma objetiva, todos os conhecimentos que obtive ao longo dos anos de minha carreira. Você terá a oportunidade de evoluir em semanas ou meses o que os programadores sêniors levam anos para aprender.
 
-O que você aprenderá
+O que você aprenderá.
 
   - Usar TDD da forma correta.
   - Usar o Clean Architecture em um projeto feito com ReactJS.
