@@ -1,4 +1,4 @@
-## reactjs - typescript
+# **4Dev React - Enquetes para Programadores**
 
 Nesse curso irei demonstrar na prática como criar um sistema em ReactJS utilizando Typescript, Hooks e seguindo as melhores metodologias do mercado. Se você está cansado de cursos básicos e quer realmente aprender sobre conteúdos avançados e relevantes como: Design Patterns, Clean Architecture, SOLID, DRY, KISS, YAGNI e TDD, você está no lugar certo. O objetivo maior desse treinamento é fazer você sair da sua zona de conforto e ver que existem muitas coisas a serem estudadas para se tornar um líder técnico ou um arquiteto de software.
 
