@@ -51,8 +51,8 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
       <Context.Provider value={{ state, setState }}>
         <form data-testid="form" className={Styles.form} onSubmit={handleSubmit}>
           <h2>Login</h2>
-          <Input type="email" name="email" placeholder="Dígite seu e-mail" />
-          <Input type="password" name="password" placeholder="Dígite sua senha" />
+          <Input type="email" name="email" placeholder="Dígite seu e-mail." />
+          <Input type="password" name="password" placeholder="Dígite sua senha." />
           <button data-testid="submit" disabled={!!state.emailError || !!state.passwordError} className={Styles.submit} type="submit">Entrar</button>
           <Link data-testid="signup" to="/signup" className={Styles.link}>Criar conta</Link>
           <FormStatus />
