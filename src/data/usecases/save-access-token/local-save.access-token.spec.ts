@@ -25,10 +25,9 @@ describe('LocalSaveAccessToken', () => {
     expect(setStorageMock.value).toBe(accessToken)
   })
 
-  test('Should thorw if SetStorage throws', async () => {
+  test('Should throw if SetStorage throws', async () => {
     const { sut, setStorageMock } = makeSut()
     jest.spyOn(setStorageMock, 'set').mockRejectedValueOnce(new Error())
-
     const promise = sut.save(faker.random.uuid())
     await expect(promise).rejects.toThrow(new Error())
   })
