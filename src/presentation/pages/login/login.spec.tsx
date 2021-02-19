@@ -4,9 +4,8 @@ import { createMemoryHistory } from 'history'
 import faker from 'faker'
 import { render, RenderResult, fireEvent, cleanup, waitFor } from '@testing-library/react'
 import { Login } from '@/presentation/pages'
-import { ValidationStub, AuthenticationSpy } from '@/presentation/test/'
+import { ValidationStub, AuthenticationSpy, SaveAccessTokenMock } from '@/presentation/test/'
 import { InvalidCredentialsError } from '@/domain/errors'
-import { SaveAccessTokenMock } from '@/presentation/test/mock-save-access-token'
 
 type SutTypes = {
   sut: RenderResult
