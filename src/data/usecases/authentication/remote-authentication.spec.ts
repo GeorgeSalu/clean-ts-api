@@ -1,7 +1,7 @@
+import { HttpPostClientSpy } from './../../test/mock-http'
 import { UnexpectedError } from './../../../domain/errors/unexpected-error'
 import { InvalidCredentialsError } from './../../../domain/errors/invalid-credentials-errors'
 import { mockAccoutModel, mockAuthentication } from '../../../domain/test/mock-account'
-import { HttpPostClientSpy } from '../../test/mock-http-client'
 import { RemoteAuthentication } from './remote-authentication'
 import faker from 'faker'
 import { HttpStatusCode } from '@/data/protocols/http/http-response'
