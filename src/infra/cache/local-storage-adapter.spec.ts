@@ -9,7 +9,7 @@ describe('LocalStorageAdapter', () => {
     localStorage.clear()
   })
 
-  test('should call localstorage with correct values', async () => {
+  test('should call localStorage with correct values', async () => {
     const sut = makeSut()
     const key = faker.database.column()
     const value = faker.random.word()
