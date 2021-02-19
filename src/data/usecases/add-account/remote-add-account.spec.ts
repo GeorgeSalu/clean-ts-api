@@ -6,7 +6,7 @@ import { HttpPostClientSpy } from '@/data/test'
 import { AddAccountParams } from '@/domain/usecases'
 import { AccountModel } from '@/domain/models'
 import faker from 'faker'
-import { mockAccoutModel, mockAddAccountParams } from '@/domain/test'
+import { mockAccountModel, mockAddAccountParams } from '@/domain/test'
 
 type SutTypes = {
   sut: RemoteAddAccount
@@ -75,7 +75,7 @@ describe('RemoteAuthentication', () => {
 
   test('Should return an AccountModel if HttpPostClient returns 200', async () => {
     const { sut, httpPostClientSpy } = makSut()
-    const httpResult = mockAccoutModel()
+    const httpResult = mockAccountModel()
     httpPostClientSpy.response = {
       statusCode: HttpStatusCode.ok,
       body: httpResult
