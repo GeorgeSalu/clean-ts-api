@@ -26,4 +26,11 @@ describe('RemoteAuthentication', () => {
     await sut.add(mockAddAccountParams())
     expect(httpPostClientSpy.url).toBe(url)
   })
+
+  test('Should call HttpPostClient with correct body', async () => {
+    const { sut, httpPostClientSpy } = makSut()
+    const authenticationParams = mockAddAccountParams()
+    await sut.add(authenticationParams)
+    expect(httpPostClientSpy.body).toEqual(authenticationParams)
+  })
 })
