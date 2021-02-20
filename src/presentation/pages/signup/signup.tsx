@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Styles from './signup-styles.scss'
 import { Footer, Input, LoginHeader, FormStatus } from '@/presentation/components'
-import Context from '@/presentation/contexts/from/form-context'
+import Context from '@/presentation/contexts/form/form-context'
 
 const SignUp: React.FC = () => {
   const [state] = useState({
