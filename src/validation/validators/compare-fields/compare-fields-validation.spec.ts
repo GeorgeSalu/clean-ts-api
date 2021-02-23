@@ -1,4 +1,4 @@
-import { CompareFieldsValidation } from './compare-field-validation'
+import { CompareFieldsValidation } from './compare-fields-validation'
 import { InvalidFieldError } from '@/validation/errors'
 import faker from 'faker'
 
