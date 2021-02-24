@@ -8,7 +8,8 @@
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "npm test -- --watch",
     "test:staged": "npm test -- --findRelatedTests",
-    "test:ci": "npm test -- --coverage"
+    "test:ci": "npm test -- --coverage",
+    "test:cypress": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/GeorgeSalu/clean-ts-api#readme",
   "devDependencies": {
+    "@cypress/webpack-preprocessor": "^5.4.1",
     "@testing-library/react": "^10.0.4",
     "@types/axios": "^0.14.0",
     "@types/faker": "^4.1.12",
@@ -33,8 +35,10 @@
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.5.3",
+    "cypress": "^4.6.0",
     "eslint": "^7.0.0",
     "eslint-config-standard-with-typescript": "^16.0.0",
+    "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
