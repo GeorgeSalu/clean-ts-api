@@ -9,11 +9,12 @@ describe('LocalStorageAdapter', () => {
     localStorage.clear()
   })
 
-  test('should call localStorage with correct values', async () => {
+  test('Should call localStorage with correct values', async () => {
     const sut = makeSut()
     const key = faker.database.column()
     const value = faker.random.word()
-    await sut.set(key, value)
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    sut.set(key, value)
     expect(localStorage.setItem).toHaveBeenCalledWith(key, value)
   })
 })
