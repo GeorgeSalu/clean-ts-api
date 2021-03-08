@@ -1,5 +1,5 @@
 import { SurveyList } from '@/presentation/pages'
-import { LoadSurveyList } from '@/domain/usecases/load-survey-list'
+import { LoadSurveyList } from '@/domain/usecases'
 import { SurveyModel } from '@/domain/models'
 import { mockSurveyListModel } from '@/domain/test'
 import { render, screen, waitFor } from '@testing-library/react'
