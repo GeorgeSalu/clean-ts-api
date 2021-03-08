@@ -1,4 +1,4 @@
-import { AxiosHttpClient } from './axios-http-client'
+import { AxiosHttpClient } from '@/infra/http/axios-http-client/axios-http-client'
 import { mockAxios, mockHttpResponse } from '@/infra/test'
 import { mockPostRequest, mockGetRequest } from '@/data/test'
 import axios from 'axios'
@@ -53,7 +53,7 @@ describe('AxiosHttpClient', () => {
       const request = mockGetRequest()
       const { sut, mockedAxios } = makeSut()
       await sut.get(request)
-      expect(mockedAxios.get).toHaveBeenCalledWith(request.url)
+      expect(mockedAxios.get).toHaveBeenCalledWith(request.url, { headers: request.headers })
     })
 
     test('Should return correct response on axios.get', async () => {
