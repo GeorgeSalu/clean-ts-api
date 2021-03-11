@@ -1,4 +1,4 @@
-import { CompareFieldsValidation } from './compare-fields-validation'
+import { CompareFieldsValidation } from '@/validation/validators'
 import { InvalidFieldError } from '@/validation/errors'
 import faker from 'faker'
 
@@ -10,8 +10,8 @@ describe('CompareFieldsValidation', () => {
     const fieldToCompare = faker.database.column()
     const sut = makeSut(field, fieldToCompare)
     const error = sut.validate({
-      [field]: faker.random.words(3),
-      [fieldToCompare]: faker.random.words(4)
+      [field]: 'any_value',
+      [fieldToCompare]: 'other_value'
     })
     expect(error).toEqual(new InvalidFieldError())
   })
