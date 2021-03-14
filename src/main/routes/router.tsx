@@ -1,4 +1,3 @@
-
 import { ApiContext } from '@/presentation/contexts'
 import { PrivateRoute } from '@/presentation/components'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
