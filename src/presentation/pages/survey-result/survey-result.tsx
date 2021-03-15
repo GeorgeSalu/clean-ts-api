@@ -1,9 +1,8 @@
 import Styles from './survey-result-styles.scss'
-import { Header, Footer, Calendar, Error } from '@/presentation/components'
+import { Header, Footer, Loading, Calendar, Error } from '@/presentation/components'
 import { LoadSurveyResult } from '@/domain/usecases'
 import FlipMove from 'react-flip-move'
 import React, { useState } from 'react'
-import Loading from '@/presentation/components/loading/loading'
 
 const SurveyResult: React.FC = () => {
   const [state] = useState({
